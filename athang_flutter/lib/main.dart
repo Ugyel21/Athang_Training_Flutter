@@ -1,4 +1,4 @@
-import 'package:athang_flutter/screens/Discovery.dart';
+import 'package:athang_flutter/screens/Delivery.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Discovery(),
+      home: const Delivery(),
     );
   }
 }
