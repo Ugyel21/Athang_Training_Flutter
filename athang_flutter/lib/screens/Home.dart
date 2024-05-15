@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:athang_flutter/screens/Products.dart';
 import 'package:athang_flutter/widgets/SmallCard.dart';
 import 'package:athang_flutter/widgets/ProductCard.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +17,23 @@ class Home extends StatelessWidget {
           ),
           backgroundColor: Colors.amber,
         ),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             children: [
-              BirdCard(),
-              SmallCard(),
-              SmallCard(),
+              const BirdCard(),
+              const SmallCard(),
+              const SmallCard(),
+              Container(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Products()),
+                  );
+                },
+                child: const Text('Go to Next Page'),
+              ),
+            )
             ],
           ),
         ));

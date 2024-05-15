@@ -66,18 +66,33 @@ class RestaurantCard extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
-                        decoration: const BoxDecoration(border: Border(right: BorderSide(color: Colors.grey, width: 2))),
-                        padding: const EdgeInsets.only(right: 4, left: 4), 
-                        child: const Text('Italin', style: TextStyle(fontSize: 14, color: Colors.grey),),
+                        decoration: const BoxDecoration(
+                            border: Border(
+                                right:
+                                    BorderSide(color: Colors.grey, width: 2))),
+                        padding: const EdgeInsets.only(right: 4, left: 4),
+                        child: const Text(
+                          'Italin',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
                       ),
-                       Container(
-                        decoration: const BoxDecoration(border: Border(right: BorderSide(color: Colors.grey, width: 2))),
-                        padding: const EdgeInsets.only(right: 4, left: 4), 
-                        child: const Text('Fresh', style: TextStyle(fontSize: 14, color: Colors.grey),),
+                      Container(
+                        decoration: const BoxDecoration(
+                            border: Border(
+                                right:
+                                    BorderSide(color: Colors.grey, width: 2))),
+                        padding: const EdgeInsets.only(right: 4, left: 4),
+                        child: const Text(
+                          'Fresh',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
                       ),
-                       Container(
-                        padding: const EdgeInsets.only(right: 4, left: 4), 
-                        child: const Text('Buy', style: TextStyle(fontSize: 14, color: Colors.grey),),
+                      Container(
+                        padding: const EdgeInsets.only(right: 4, left: 4),
+                        child: const Text(
+                          'Buy',
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
                       )
                     ],
                   ),

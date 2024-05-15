@@ -1,3 +1,4 @@
+import 'package:athang_flutter/screens/Discovery.dart';
 import 'package:athang_flutter/widgets/delivery/CategoryMenu.dart';
 import 'package:athang_flutter/widgets/delivery/Header.dart';
 import 'package:athang_flutter/widgets/delivery/RecentContainer.dart';
@@ -13,14 +14,25 @@ class Delivery extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: const SingleChildScrollView(
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              Header(),
-              SubHeader(),
-              CategoryMenu(),
-              RecentContainer(),
-              RestaurantContainer()
+              const Header(),
+              const SubHeader(),
+              const CategoryMenu(),
+              const RecentContainer(),
+              const RestaurantContainer(),
+              Container(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Discovery()),
+                  );
+                },
+                child: const Text('Go to Next Page'),
+              ),
+            )
             ],
           ),
         ),

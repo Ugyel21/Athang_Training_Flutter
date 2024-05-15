@@ -1,3 +1,4 @@
+import 'package:athang_flutter/screens/Delivery.dart';
 import 'package:athang_flutter/widgets/product_widgets/FeaturedContainer.dart';
 import 'package:athang_flutter/widgets/product_widgets/RecommendedContainer.dart';
 import 'package:athang_flutter/widgets/product_widgets/SearchContainer.dart';
@@ -16,12 +17,23 @@ class Products extends StatelessWidget {
               fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            SearchContainer(),
-            RecommendedContainer(),
-            FeaturedContainer()
+            const SearchContainer(),
+            const RecommendedContainer(),
+            const FeaturedContainer(),
+            Container(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Delivery()),
+                  );
+                },
+                child: const Text('Go to Next Page'),
+              ),
+            )
           ],
         ),
       ),
