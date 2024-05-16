@@ -11,7 +11,7 @@ class HomeTravel extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             PopularContainer(),

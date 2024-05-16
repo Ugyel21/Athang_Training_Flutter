@@ -1,16 +1,12 @@
+import 'package:athang_flutter/models/PlaceCardModel.dart';
 import 'package:athang_flutter/screens/travels/DetailsTravel.dart';
 import 'package:flutter/material.dart';
 
 class MediumTravelCard extends StatelessWidget {
-  final String title;
-  final String url;
-  final String description;
+  final PlaceCardModel place;
 
-  const MediumTravelCard({super.key, 
-    required this.title,
-    this.description = "Basic description",
-    this.url =
-        "https://cdn.pixabay.com/photo/2023/01/13/14/58/snake-7716269_1280.jpg",
+  const MediumTravelCard({
+    super.key, required this.place
   });
 
   @override
@@ -19,7 +15,7 @@ class MediumTravelCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const DetailsTravel()),
+          MaterialPageRoute(builder: (context) => DetailsTravel( place: place,)),
         );
       },
       child: Container(
@@ -32,7 +28,7 @@ class MediumTravelCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Image.network(
-                url,
+                place.url,
                 fit: BoxFit.cover,
                 height: 100,
                 width: 100,
@@ -45,13 +41,13 @@ class MediumTravelCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      title,
+                      place.title,
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(description),
+                    Text(place.description),
                   ],
                 ),
               ),
