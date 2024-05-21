@@ -24,14 +24,14 @@ class _MoviesByCategoryScreenState extends State<MoviesByCategoryScreen> {
         title: Text(widget.category),
       ),
       body: Container(
-        child: movieList.length == 0 ? Center(
+        child: movieList.isEmpty ? const Center(
           child: Text('No movies available for this category'),
         ):ListView.builder(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: movieList.length,
             itemBuilder: (BuildContext context, int index) {
-              return MovieTile(movie: movieList[index]);;
+              return MovieTile(movie: movieList[index]);
             }),
       ),
     );

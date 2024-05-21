@@ -11,13 +11,13 @@ class MovieTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MovieDetails()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const MovieDetails()));
       },
       title: Text(movie.title, ),
       // subtitle: Text(movie.year.toString(), style: TextStyle(
       subtitle: Text(
         movie.year.toString(),
-        style: TextStyle(),
+        style: const TextStyle(),
       ),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(12),
@@ -30,7 +30,7 @@ class MovieTile extends StatelessWidget {
       ),
       trailing: Text(
         movie.rating.toString(),
-        style: TextStyle(fontSize: 24),
+        style: const TextStyle(fontSize: 24),
       ),
     );
   }

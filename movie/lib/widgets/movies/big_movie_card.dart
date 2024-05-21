@@ -5,13 +5,13 @@ import '../../screens/movie/movie_details.dart';
 
 class BigMovieCard extends StatelessWidget {
   MovieModel movie;
-  BigMovieCard(this.movie);
+  BigMovieCard(this.movie, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MovieDetails()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const MovieDetails()));
       },
       child: Container(
         height:200,
@@ -23,10 +23,10 @@ class BigMovieCard extends StatelessWidget {
             image:  NetworkImage(movie.img)
           ),
         ),
-        margin: EdgeInsets.only(right: 8),
+        margin: const EdgeInsets.only(right: 8),
         alignment: Alignment.bottomLeft,
         child: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
         ),
       ),
     );
