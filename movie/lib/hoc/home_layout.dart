@@ -11,13 +11,13 @@ class HomeLayout extends StatefulWidget {
 }
 
 class _HomeLayoutState extends State<HomeLayout> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
 
   List<String> titles = ['Home', 'Trending', 'Categories'];
   List<Widget> screens = [
-    HomeMovieScreen(),
+    const HomeMovieScreen(),
     TrendingMovieScreen(),
-    CategoriesMovieScreen()
+    const CategoriesMovieScreen()
   ];
 
   @override
@@ -36,7 +36,7 @@ class _HomeLayoutState extends State<HomeLayout> {
              _selectedIndex = val;
            });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.star),label: 'Trending'),
           BottomNavigationBarItem(icon: Icon(Icons.list),label: 'Categories'),

@@ -8,12 +8,13 @@ class TrendingMovies extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // accessing movie data
     final trending = Provider.of<MovieProvider>(context).trending;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           'Trending',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),

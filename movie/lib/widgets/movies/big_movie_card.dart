@@ -11,7 +11,7 @@ class BigMovieCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const MovieDetails()));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MovieDetails(movieId:movie.id)));
       },
       child: Container(
         height:200,
@@ -26,7 +26,13 @@ class BigMovieCard extends StatelessWidget {
         margin: const EdgeInsets.only(right: 8),
         alignment: Alignment.bottomLeft,
         child: Container(
+          width: double.infinity,
+          color:Colors.black,
           padding: const EdgeInsets.all(8),
+          child: Text(movie.title, style: const TextStyle(
+            color: Colors.white
+          ),),
+
         ),
       ),
     );
