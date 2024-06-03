@@ -13,16 +13,14 @@ class HomeMovieScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       height: MediaQuery.of(context).size.height,
-      child: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const TrendingMovies(),
-              CategoriesList(),
-              LatestMovies()
-            ],
-          ),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const TrendingMovies(),
+            const CategoriesList(),
+            LatestMovies()
+          ],
         ),
       ),
     );

@@ -16,7 +16,7 @@ class _HomeLayoutState extends State<HomeLayout> {
   List<String> titles = ['Home', 'Trending', 'Categories'];
   List<Widget> screens = [
     const HomeMovieScreen(),
-    TrendingMovieScreen(),
+    const TrendingMovieScreen(),
     const CategoriesMovieScreen()
   ];
 

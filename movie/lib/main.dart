@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // home: HomeMovieScreen(),
         initialRoute: '/',
         routes: {
-          '/': (context)=> HomeLayout(),
+          '/': (context)=> const HomeLayout(),
           // '/trending': (context)=> TrendingMovieScreen(),
           // '/categories': (context)=> CategoriesMovieScreen(),
         }

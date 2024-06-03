@@ -18,13 +18,11 @@ class TrendingMovies extends StatelessWidget {
           'Trending',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        Container(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: trending.map((el)=>BigMovieCard(el)
-              ).toList(),
-            ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: trending.map((el)=>BigMovieCard(el)
+            ).toList(),
           ),
         ),
       ],

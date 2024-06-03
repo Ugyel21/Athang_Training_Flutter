@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198143752083",
+    "project_id": "travel-expenses-879f9",
+    "storage_bucket": "travel-expenses-879f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198143752083:android:e3fff6057415b7fefe9a66",
+        "android_client_info": {
+          "package_name": "com.example.athang_expense_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnivhNoZmlck_ligmtsv3ZhViyM1XIAJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
