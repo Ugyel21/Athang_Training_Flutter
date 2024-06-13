@@ -17,7 +17,7 @@ class MovieTile extends StatelessWidget {
       // subtitle: Text(movie.year.toString(), style: TextStyle(
       subtitle: Text(
         movie.year.toString(),
-        style: const TextStyle(),
+        style: TextStyle(),
       ),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(12),
@@ -30,7 +30,7 @@ class MovieTile extends StatelessWidget {
       ),
       trailing: Text(
         movie.rating.toString(),
-        style: const TextStyle(fontSize: 24),
+        style: TextStyle(fontSize: 24),
       ),
     );
   }

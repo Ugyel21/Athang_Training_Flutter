@@ -14,15 +14,17 @@ class TrendingMovies extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Trending',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: trending.map((el)=>BigMovieCard(el)
-            ).toList(),
+        Container(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: trending.map((el)=>BigMovieCard(el)
+              ).toList(),
+            ),
           ),
         ),
       ],

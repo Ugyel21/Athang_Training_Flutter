@@ -5,7 +5,7 @@ import '../../screens/movie/movie_details.dart';
 
 class BigMovieCard extends StatelessWidget {
   MovieModel movie;
-  BigMovieCard(this.movie, {super.key});
+  BigMovieCard(this.movie);
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +23,13 @@ class BigMovieCard extends StatelessWidget {
             image:  NetworkImage(movie.img)
           ),
         ),
-        margin: const EdgeInsets.only(right: 8),
+        margin: EdgeInsets.only(right: 8),
         alignment: Alignment.bottomLeft,
         child: Container(
           width: double.infinity,
           color:Colors.black,
-          padding: const EdgeInsets.all(8),
-          child: Text(movie.title, style: const TextStyle(
+          padding: EdgeInsets.all(8),
+          child: Text(movie.title, style: TextStyle(
             color: Colors.white
           ),),
 

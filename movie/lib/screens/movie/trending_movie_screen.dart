@@ -6,8 +6,6 @@ import 'package:provider/provider.dart';
 import '../../models/movie_model.dart';
 
 class TrendingMovieScreen extends StatefulWidget {
-  const TrendingMovieScreen({super.key});
-
   @override
   State<TrendingMovieScreen> createState() => _TrendingMovieScreenState();
 }
@@ -16,7 +14,6 @@ class _TrendingMovieScreenState extends State<TrendingMovieScreen> {
 
   @override
   void initState(){
-    super.initState();
     print('prints at first');
     Provider.of<MovieProvider>(context, listen: false).loadMovies();
   }
@@ -28,7 +25,7 @@ class _TrendingMovieScreenState extends State<TrendingMovieScreen> {
     return Container(
       child: ListView.builder(
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
+          physics: NeverScrollableScrollPhysics(),
           itemCount: movieList.length,
           itemBuilder: (BuildContext context, int index) {
             return MovieTile(movie: movieList[index]);

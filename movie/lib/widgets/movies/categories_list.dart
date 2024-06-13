@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:movie/providers/movie_provider.dart';
+import 'package:movie/screens/movie/categories_movie_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../../screens/movie/movies_by_category_screen.dart';
 
 class CategoriesList extends StatelessWidget {
-  const CategoriesList({super.key});
-
   @override
   Widget build(BuildContext context) {
     final categories = Provider.of<MovieProvider>(context).categories;
     return Container(
-      margin: const EdgeInsets.only(top: 16),
+      margin: EdgeInsets.only(top: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Categories',
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -35,8 +34,8 @@ class CategoriesList extends StatelessWidget {
                               color: Colors.grey,
                               width: 1,
                             )),
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                        margin: const EdgeInsets.only(right: 4, bottom: 4),
+                        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        margin: EdgeInsets.only(right: 4, bottom: 4),
                         child: Text(cat),
                       ),
                 ))
